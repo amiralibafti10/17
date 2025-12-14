@@ -1,1 +1,2259 @@
-# 17
+<!doctype html>
+<html lang="fa" dir="rtl" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 آکادمی هکینگ امیرعلی بافتی - Python Hacking Pro 🐍</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&family=Audiowide&family=Iceland&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .en-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+        
+        .cyber-font {
+            font-family: 'Audiowide', cursive;
+        }
+        
+        .matrix-font {
+            font-family: 'Iceland', cursive;
+        }
+        
+        /* MATRIX RAIN CANVAS */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        
+        /* PARTICLES EFFECT */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        
+        /* ANIMATED BACKGROUNDS */
+        .bg-matrix-blue {
+            background: linear-gradient(135deg, #001a33 0%, #003d66 25%, #0066cc 50%, #003d66 75%, #001a33 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-purple {
+            background: linear-gradient(135deg, #1a001a 0%, #330033 25%, #660066 50%, #330033 75%, #1a001a 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-cyan {
+            background: linear-gradient(135deg, #001a1a 0%, #003333 25%, #006666 50%, #003333 75%, #001a1a 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-green {
+            background: linear-gradient(135deg, #001a00 0%, #003300 25%, #006600 50%, #003300 75%, #001a00 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-red {
+            background: linear-gradient(135deg, #1a0000 0%, #330000 25%, #660000 50%, #330000 75%, #1a0000 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-orange {
+            background: linear-gradient(135deg, #1a0d00 0%, #331a00 25%, #663300 50%, #331a00 75%, #1a0d00 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        .bg-matrix-yellow {
+            background: linear-gradient(135deg, #1a1a00 0%, #333300 25%, #666600 50%, #333300 75%, #1a1a00 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 20s ease infinite;
+        }
+        
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* NEON TEXT EFFECTS */
+        .neon-blue {
+            color: #00d4ff;
+            text-shadow: 
+                0 0 10px #00d4ff,
+                0 0 20px #00d4ff,
+                0 0 30px #00d4ff,
+                0 0 40px #0080ff,
+                0 0 70px #0080ff,
+                0 0 100px #0080ff;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-purple {
+            color: #b967ff;
+            text-shadow: 
+                0 0 10px #b967ff,
+                0 0 20px #b967ff,
+                0 0 30px #b967ff,
+                0 0 40px #8b5cf6,
+                0 0 70px #8b5cf6;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-green {
+            color: #00ff41;
+            text-shadow: 
+                0 0 10px #00ff41,
+                0 0 20px #00ff41,
+                0 0 30px #00ff41,
+                0 0 40px #00cc33,
+                0 0 70px #00cc33;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-red {
+            color: #ff0040;
+            text-shadow: 
+                0 0 10px #ff0040,
+                0 0 20px #ff0040,
+                0 0 30px #ff0040,
+                0 0 40px #cc0033;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-yellow {
+            color: #ffff00;
+            text-shadow: 
+                0 0 10px #ffff00,
+                0 0 20px #ffff00,
+                0 0 30px #ffff00,
+                0 0 40px #ffcc00;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-orange {
+            color: #ff9500;
+            text-shadow: 
+                0 0 10px #ff9500,
+                0 0 20px #ff9500,
+                0 0 30px #ff9500;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        .neon-cyan {
+            color: #00ffff;
+            text-shadow: 
+                0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 30px #00ffff;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes neonPulse {
+            from {
+                text-shadow: 
+                    0 0 10px currentColor,
+                    0 0 20px currentColor,
+                    0 0 30px currentColor,
+                    0 0 40px currentColor;
+            }
+            to {
+                text-shadow: 
+                    0 0 20px currentColor,
+                    0 0 30px currentColor,
+                    0 0 40px currentColor,
+                    0 0 60px currentColor,
+                    0 0 100px currentColor;
+            }
+        }
+        
+        /* 3D BUTTONS */
+        .btn-3d {
+            position: relative;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            overflow: hidden;
+        }
+        
+        .btn-3d::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-3d:hover::before {
+            left: 100%;
+        }
+        
+        .btn-3d:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        
+        .btn-3d:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+        
+        .btn-blue {
+            background: linear-gradient(145deg, #00d4ff, #0080ff);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+        }
+        
+        .btn-purple {
+            background: linear-gradient(145deg, #b967ff, #8b5cf6);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(185, 103, 255, 0.5);
+        }
+        
+        .btn-green {
+            background: linear-gradient(145deg, #00ff41, #00cc33);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.5);
+        }
+        
+        .btn-red {
+            background: linear-gradient(145deg, #ff0040, #cc0033);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(255, 0, 64, 0.5);
+        }
+        
+        .btn-yellow {
+            background: linear-gradient(145deg, #ffff00, #ffcc00);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255, 255, 0, 0.5);
+        }
+        
+        .btn-orange {
+            background: linear-gradient(145deg, #ff9500, #ff6600);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255, 149, 0, 0.5);
+        }
+        
+        .btn-white-black {
+            background: linear-gradient(145deg, #ffffff, #cccccc);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+            border: 3px solid #000;
+        }
+        
+        .btn-lime {
+            background: linear-gradient(145deg, #9acd32, #7cb342);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(154, 205, 50, 0.5);
+        }
+        
+        .btn-cyan {
+            background: linear-gradient(145deg, #00ffff, #00cccc);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+        }
+        
+        /* CARD 3D */
+        .card-3d {
+            background: rgba(0, 20, 40, 0.9);
+            border: 3px solid;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, transparent, currentColor, transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s;
+            animation: borderRotate 3s linear infinite;
+        }
+        
+        @keyframes borderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .card-3d:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        }
+        
+        .card-3d:hover::before {
+            opacity: 0.5;
+        }
+        
+        /* CODE BOX */
+        .code-box {
+            background: rgba(0, 10, 20, 0.95);
+            border: 2px solid;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            font-family: 'Fira Code', monospace;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .code-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+        
+        .code-text {
+            color: #00ff41;
+            font-size: 14px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(145deg, #00ff41, #00cc33);
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 255, 65, 0.4);
+        }
+        
+        .copy-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.6);
+        }
+        
+        .copy-btn.copied {
+            background: linear-gradient(145deg, #b967ff, #8b5cf6);
+            color: #fff;
+        }
+        
+        /* INPUT FIELDS */
+        .input-3d {
+            background: rgba(0, 20, 40, 0.8);
+            border: 3px solid;
+            color: #00d4ff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+            outline: none;
+        }
+        
+        .input-3d:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px currentColor;
+            background: rgba(0, 20, 40, 0.95);
+        }
+        
+        .input-3d::placeholder {
+            color: rgba(0, 212, 255, 0.5);
+        }
+        
+        /* MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: rgba(10, 14, 39, 0.98);
+            border: 4px solid;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 90%;
+            max-height: 85%;
+            overflow-y: auto;
+            animation: modalZoom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        @keyframes modalZoom {
+            from {
+                transform: scale(0.5) translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* THEME GRID */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .theme-card {
+            padding: 30px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.4s;
+            text-align: center;
+            border: 3px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .theme-card:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .theme-card:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* PAGE TRANSITIONS */
+        .page {
+            display: none;
+            animation: pageSlideIn 0.5s;
+            min-height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes pageSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* TOAST NOTIFICATION */
+        .toast {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: rgba(0, 20, 40, 0.98);
+            border: 3px solid #00ff41;
+            border-radius: 16px;
+            padding: 20px 30px;
+            color: #00ff41;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.5);
+            animation: toastSlide 0.5s, toastSlideOut 0.5s 2.5s;
+            z-index: 10000;
+        }
+        
+        @keyframes toastSlide {
+            from {
+                transform: translateX(500px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes toastSlideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(500px);
+                opacity: 0;
+            }
+        }
+        
+        /* LOADING SPINNER */
+        .loader {
+            border: 6px solid rgba(0, 212, 255, 0.2);
+            border-top: 6px solid #00d4ff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000;
+            border-left: 2px solid #00d4ff;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00d4ff, #0080ff);
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #00ffff, #00d4ff);
+        }
+        
+        /* FLOATING ANIMATION */
+        .float {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* GLITCH EFFECT */
+        .glitch {
+            position: relative;
+            animation: glitch 5s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            91% { transform: translate(-3px, 3px); }
+            92% { transform: translate(3px, -3px); }
+            93% { transform: translate(-3px, -3px); }
+            94% { transform: translate(3px, 3px); }
+            95% { transform: translate(-3px, 3px); }
+        }
+        
+        /* SCAN LINE */
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.9), transparent);
+            animation: scan 8s linear infinite;
+            pointer-events: none;
+            z-index: 9998;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+        
+        @keyframes scan {
+            0% { top: -10px; }
+            100% { top: 100%; }
+        }
+        
+        /* AI CHAT STYLES */
+        .ai-message {
+            background: rgba(0, 20, 40, 0.9);
+            border: 2px solid #00d4ff;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            animation: messageSlide 0.4s;
+        }
+        
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .user-message {
+            background: rgba(0, 80, 255, 0.2);
+            border: 2px solid #0080ff;
+            text-align: right;
+        }
+        
+        .ai-response {
+            background: rgba(185, 103, 255, 0.2);
+            border: 2px solid #b967ff;
+            text-align: left;
+        }
+        
+        /* COURSE CARD */
+        .course-card {
+            background: rgba(0, 20, 40, 0.95);
+            border: 3px solid #00ff41;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+        
+        .course-card:hover::after {
+            top: -100%;
+            right: -100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 255, 65, 0.4);
+            border-color: #ffff00;
+        }
+        
+        /* STATS COUNTER */
+        .stats-box {
+            background: rgba(0, 30, 60, 0.9);
+            border: 3px solid #00d4ff;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        /* CYBER GRID */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* HOLOGRAPHIC EFFECT */
+        .holographic {
+            background: linear-gradient(45deg, 
+                #00d4ff 0%, 
+                #b967ff 25%, 
+                #00ff41 50%, 
+                #ffff00 75%, 
+                #00d4ff 100%);
+            background-size: 300% 300%;
+            animation: hologramShift 5s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes hologramShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* PROGRESS BAR */
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #00ff41);
+            border-radius: 10px;
+            transition: width 0.5s;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+        }
+        
+        /* BADGE */
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 2px solid;
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* TERMINAL WINDOW */
+        .terminal {
+            background: #000;
+            border: 3px solid #00ff41;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            color: #00ff41;
+            position: relative;
+        }
+        
+        .terminal::before {
+            content: '● ● ●';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #ff0040;
+            font-size: 20px;
+        }
+        
+        .terminal-line {
+            margin: 8px 0;
+            animation: terminalType 0.5s;
+        }
+        
+        @keyframes terminalType {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* CYBER BUTTON EFFECT */
+        .cyber-btn {
+            position: relative;
+            padding: 15px 30px;
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            font-weight: bold;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .cyber-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #00d4ff;
+            transition: left 0.3s;
+            z-index: -1;
+        }
+        
+        .cyber-btn:hover::before {
+            left: 0;
+        }
+        
+        .cyber-btn:hover {
+            color: #000;
+            box-shadow: 0 0 30px #00d4ff;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .btn-3d {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+            
+            .neon-blue, .neon-purple, .neon-green {
+                font-size: 1.5rem;
+            }
+            
+            .theme-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+        
+        /* RATING STARS */
+        .stars {
+            color: #ffff00;
+            font-size: 24px;
+            text-shadow: 0 0 10px #ffff00;
+        }
+        
+        /* TIMER DISPLAY */
+        .timer {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            color: #00ff41;
+            text-shadow: 0 0 20px #00ff41;
+        }
+        
+        /* SKILL METER */
+        .skill-meter {
+            width: 100%;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #00d4ff;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #00ff41);
+            border-radius: 15px;
+            transition: width 1s;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body class="h-full w-full bg-matrix-blue overflow-auto"><!-- MATRIX RAIN CANVAS -->
+  <canvas id="matrix-canvas"></canvas><!-- PARTICLES CANVAS -->
+  <canvas id="particles-canvas"></canvas><!-- CYBER GRID -->
+  <div class="cyber-grid"></div><!-- SCAN LINE -->
+  <div class="scanline"></div><!-- STATS SIDEBAR -->
+  <div id="statsSidebar" class="fixed left-6 top-32 z-50 space-y-4" style="max-width: 250px;">
+   <div class="stats-box">
+    <div class="text-4xl mb-2 neon-blue font-black" id="visitorCount">
+     0
+    </div>
+    <div class="text-sm text-cyan-300">
+     👥 بازدیدکنندگان
+    </div>
+   </div>
+   <div class="stats-box border-green-400">
+    <div class="text-4xl mb-2 neon-green font-black" id="userCount">
+     0
+    </div>
+    <div class="text-sm text-green-300">
+     👨‍💻 کاربران
+    </div>
+   </div>
+   <div class="stats-box border-purple-400">
+    <div class="text-4xl mb-2 neon-purple font-black">
+     1000+
+    </div>
+    <div class="text-sm text-purple-300">
+     📚 کدها
+    </div>
+   </div>
+   <div class="stats-box border-yellow-400">
+    <div class="text-4xl mb-2 neon-yellow font-black">
+     24/7
+    </div>
+    <div class="text-sm text-yellow-300">
+     ⚡ پشتیبانی
+    </div>
+   </div>
+  </div><!-- FIXED NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black bg-opacity-50 border-b-4 border-cyan-400">
+   <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between flex-wrap gap-4">
+     <div class="flex items-center gap-4">
+      <h1 class="text-3xl font-black neon-blue glitch cyber-font">AMIRALIBAFTI</h1><span class="text-lg text-cyan-300">⚡ HACKING ACADEMY</span>
+      <div class="badge border-green-400 bg-green-900 bg-opacity-30 text-green-400">
+       🔥 LIVE
+      </div>
+     </div>
+     <div class="flex items-center gap-3 flex-wrap"><button onclick="showPage('homePage')" class="btn-3d btn-blue px-6 py-3 rounded-xl">🏠 خانه</button> <button onclick="showThemeModal()" class="btn-3d btn-purple px-6 py-3 rounded-xl">🎨 تغییر تم</button> <button onclick="showPage('aiPage')" class="btn-3d btn-green px-6 py-3 rounded-xl">🤖 AI</button> <button onclick="showPage('loginPage')" class="btn-3d btn-white-black px-6 py-3 rounded-xl" id="authBtn">🔐 ورود</button> <button onclick="showPage('contactPage')" class="btn-3d btn-yellow px-6 py-3 rounded-xl">📞 ارتباط</button> <button onclick="toggleMusic()" class="btn-3d btn-cyan px-6 py-3 rounded-xl" id="musicBtn">🎵 موسیقی</button>
+     </div>
+    </div>
+   </div>
+  </nav><!-- HOME PAGE -->
+  <div id="homePage" class="page active pt-28 pb-16 px-6">
+   <div class="max-w-7xl mx-auto"><!-- HERO SECTION -->
+    <header class="text-center mb-20">
+     <div class="float">
+      <h1 class="text-8xl font-black holographic mb-6 glitch cyber-font">PYTHON HACKING</h1>
+      <h2 class="text-5xl font-bold text-cyan-400 mb-4 matrix-font">آکادمی هکینگ امیرعلی بافتی</h2>
+      <p class="text-3xl text-blue-300 mt-6">🔥 مرجع کامل هکینگ اخلاقی با پایتون 🐍</p><!-- PROGRESS BARS -->
+      <div class="mt-10 space-y-4 max-w-2xl mx-auto">
+       <div>
+        <div class="flex justify-between text-cyan-400 mb-2"><span>💪 مهارت کدنویسی</span> <span id="codingSkill">95%</span>
+        </div>
+        <div class="skill-meter">
+         <div class="skill-level" style="width: 95%"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between text-green-400 mb-2"><span>🔐 امنیت سایبری</span> <span>90%</span>
+        </div>
+        <div class="skill-meter border-green-400">
+         <div class="skill-level" style="width: 90%"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between text-purple-400 mb-2"><span>🤖 هوش مصنوعی</span> <span>88%</span>
+        </div>
+        <div class="skill-meter border-purple-400">
+         <div class="skill-level" style="width: 88%"></div>
+        </div>
+       </div>
+      </div>
+      <div class="flex justify-center gap-6 mt-10 flex-wrap"><span class="text-2xl px-8 py-4 bg-cyan-500 bg-opacity-20 rounded-full border-2 border-cyan-400 neon-blue">✅ 500+ دوره</span> <span class="text-2xl px-8 py-4 bg-green-500 bg-opacity-20 rounded-full border-2 border-green-400 neon-green">⚡ 1000+ کد</span> <span class="text-2xl px-8 py-4 bg-purple-500 bg-opacity-20 rounded-full border-2 border-purple-400 neon-purple">🔐 هکینگ حرفه‌ای</span> <span class="text-2xl px-8 py-4 bg-yellow-500 bg-opacity-20 rounded-full border-2 border-yellow-400 neon-yellow">🏆 گواهی معتبر</span>
+      </div>
+     </div>
+    </header><!-- LIVE CODING DEMO -->
+    <section class="mb-20">
+     <h2 class="text-5xl font-black text-center neon-green mb-12">💻 نمایش زنده کدنویسی</h2>
+     <div class="terminal max-w-4xl mx-auto">
+      <div class="mt-8">
+       <div class="terminal-line" style="animation-delay: 0s"><span class="text-purple-400">root@amiralibafti:~$</span> <span class="text-yellow-400">python3 hack.py</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 0.5s"><span class="text-green-400">[✓] Loading advanced hacking modules...</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 1s"><span class="text-cyan-400">[*] Initializing port scanner...</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 1.5s"><span class="text-green-400">[✓] Target: 192.168.1.100</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 2s"><span class="text-yellow-400">[!] Open ports found: 22, 80, 443, 3306</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 2.5s"><span class="text-green-400">[✓] Scan completed successfully!</span>
+       </div>
+       <div class="terminal-line" style="animation-delay: 3s"><span class="text-purple-400">root@amiralibafti:~$</span> <span class="text-cyan-400 blinking">_</span>
+       </div>
+      </div>
+     </div>
+    </section><!-- MAIN ACTIONS -->
+    <section class="mb-20">
+     <h2 class="text-5xl font-black text-center neon-blue mb-12">🎯 دسترسی سریع</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><button onclick="showPage('usagePage')" class="btn-3d btn-yellow px-8 py-12 rounded-2xl text-2xl font-black hover:scale-110">
+       <div class="text-6xl mb-4">
+        ⚙️
+       </div> کاربردها 
+       <div class="text-sm mt-2 opacity-80">
+        150 کد کاربردی
+       </div>
+       <div class="stars mt-2">
+        ★★★★★
+       </div></button> <button onclick="showPage('hackingPage')" class="btn-3d btn-red px-8 py-12 rounded-2xl text-2xl font-black hover:scale-110">
+       <div class="text-6xl mb-4">
+        💀
+       </div> هکینگ 
+       <div class="text-sm mt-2 opacity-80">
+        30 سورس هک
+       </div>
+       <div class="stars mt-2">
+        ★★★★★
+       </div></button> <button onclick="showPage('coursesListPage')" class="btn-3d btn-green px-8 py-12 rounded-2xl text-2xl font-black hover:scale-110">
+       <div class="text-6xl mb-4">
+        🎓
+       </div> خرید دوره 
+       <div class="text-sm mt-2 opacity-80">
+        200 دوره حرفه‌ای
+       </div>
+       <div class="stars mt-2">
+        ★★★★★
+       </div></button> <button onclick="showPage('contactPage')" class="btn-3d btn-orange px-8 py-12 rounded-2xl text-2xl font-black hover:scale-110">
+       <div class="text-6xl mb-4">
+        📞
+       </div> تماس با ما 
+       <div class="text-sm mt-2 opacity-80">
+        پشتیبانی 24/7
+       </div>
+       <div class="stars mt-2">
+        ★★★★★
+       </div></button>
+     </div>
+    </section><!-- TIMER SECTION -->
+    <section class="mb-20">
+     <div class="card-3d border-purple-500 text-center max-w-2xl mx-auto">
+      <h3 class="text-3xl font-black neon-purple mb-6">⏰ زمان باقی‌مانده تا تخفیف ویژه</h3>
+      <div class="timer" id="countdownTimer">
+       00:00:00
+      </div>
+      <p class="text-xl text-purple-300 mt-4">⚡ 50% تخفیف برای 100 نفر اول!</p>
+     </div>
+    </section><!-- 100 MAIN PYTHON CODES -->
+    <section class="mb-20">
+     <h2 class="text-5xl font-black text-center neon-blue mb-12">🐍 100 کاربرد اصلی پایتون</h2>
+     <div class="flex justify-center gap-4 mb-8 flex-wrap"><button onclick="filterCodes('all')" class="btn-3d btn-blue px-6 py-3 rounded-xl">همه</button> <button onclick="filterCodes('basic')" class="btn-3d btn-green px-6 py-3 rounded-xl">مقدماتی</button> <button onclick="filterCodes('intermediate')" class="btn-3d btn-yellow px-6 py-3 rounded-xl">متوسط</button> <button onclick="filterCodes('advanced')" class="btn-3d btn-red px-6 py-3 rounded-xl">پیشرفته</button>
+     </div>
+     <div id="mainPythonCodes" class="space-y-6"></div>
+    </section><!-- TESTIMONIALS -->
+    <section class="mb-20">
+     <h2 class="text-5xl font-black text-center neon-green mb-12">💬 نظرات دانشجویان</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card-3d border-green-400">
+       <div class="text-center mb-4">
+        <div class="text-5xl mb-2">
+         👤
+        </div>
+        <h4 class="text-xl font-bold text-green-400">علی رضایی</h4>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+       <p class="text-green-200">"بهترین دوره هکینگ که دیدم! استاد امیرعلی فوق‌العاده تدریس می‌کنند. از صفر تا صد رو یاد گرفتم."</p>
+      </div>
+      <div class="card-3d border-blue-400">
+       <div class="text-center mb-4">
+        <div class="text-5xl mb-2">
+         👤
+        </div>
+        <h4 class="text-xl font-bold text-blue-400">سارا احمدی</h4>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+       <p class="text-blue-200">"کدهای ارائه شده حرفه‌ای و عملی هستند. الان می‌تونم پروژه‌های واقعی انجام بدم. ممنونم!"</p>
+      </div>
+      <div class="card-3d border-purple-400">
+       <div class="text-center mb-4">
+        <div class="text-5xl mb-2">
+         👤
+        </div>
+        <h4 class="text-xl font-bold text-purple-400">محمد کریمی</h4>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+       <p class="text-purple-200">"پشتیبانی عالی! هر سوالی داشتم سریع جواب دادن. دوره‌ها ارزش هر ریالشو داره."</p>
+      </div>
+     </div>
+    </section>
+   </div>
+  </div><!-- THEME MODAL -->
+  <div id="themeModal" class="modal-overlay">
+   <div class="modal-content border-cyan-400" style="max-width: 1200px;">
+    <div class="flex justify-between items-center mb-8">
+     <h2 class="text-4xl font-black neon-blue">🎨 100 تم ماتریکس حرفه‌ای</h2><button onclick="closeThemeModal()" class="btn-3d btn-red px-6 py-3 rounded-xl">✕ بستن</button>
+    </div>
+    <div class="mb-6"><input type="text" id="themeSearch" class="input-3d border-cyan-400" placeholder="🔍 جستجوی تم..." onkeyup="searchThemes()">
+    </div>
+    <div id="themesGrid" class="theme-grid"></div>
+   </div>
+  </div><!-- AI PAGE -->
+  <div id="aiPage" class="page pt-28 pb-16 px-6 bg-matrix-purple">
+   <div class="max-w-6xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <h1 class="text-6xl font-black text-center neon-purple mb-12 cyber-font glitch">AI.AMIRALIBAFI</h1>
+    <div class="text-center mb-12"><button onclick="switchAI(1)" class="btn-3d btn-lime px-10 py-5 rounded-2xl text-2xl font-black">🔄 تغییر AI</button>
+     <div class="mt-6"><span class="badge border-purple-400 bg-purple-900 bg-opacity-50 text-purple-300 text-lg"> فعال: <span id="currentAIName">AI دانش پایتون</span> </span>
+     </div>
+    </div>
+    <div id="aiInterface" class="card-3d border-purple-500"><!-- AI Interface will load here -->
+    </div>
+   </div>
+  </div><!-- LOGIN/REGISTER PAGE -->
+  <div id="loginPage" class="page pt-28 pb-16 px-6 bg-matrix-cyan">
+   <div class="max-w-2xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <div class="card-3d border-cyan-400">
+     <h2 class="text-5xl font-black text-center neon-blue mb-10">🔐 ورود / ثبت‌نام</h2>
+     <div class="flex justify-center gap-6 mb-10"><button onclick="showLoginForm()" id="loginTabBtn" class="btn-3d btn-blue px-10 py-4 rounded-xl text-xl">ورود</button> <button onclick="showRegisterForm()" id="registerTabBtn" class="btn-3d btn-green px-10 py-4 rounded-xl text-xl">ثبت‌نام</button>
+     </div><!-- LOGIN FORM -->
+     <form id="loginForm" style="display: none;" onsubmit="handleLogin(event)">
+      <div class="space-y-6">
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">📧 ایمیل:</label> <input type="email" id="loginEmail" class="input-3d border-cyan-400" placeholder="example@email.com" required>
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">🔑 رمز عبور:</label> <input type="password" id="loginPassword" class="input-3d border-cyan-400" placeholder="رمز عبور خود را وارد کنید" required>
+       </div><button type="submit" class="btn-3d btn-blue w-full px-8 py-5 rounded-xl text-2xl font-black">🔓 ورود به سیستم</button>
+      </div>
+     </form><!-- REGISTER FORM -->
+     <form id="registerForm" onsubmit="handleRegister(event)">
+      <div class="space-y-6">
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">👤 نام کامل:</label> <input type="text" id="regFullname" class="input-3d border-cyan-400" placeholder="نام و نام خانوادگی" required>
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">🆔 نام کاربری:</label> <input type="text" id="regUsername" class="input-3d border-cyan-400" placeholder="نام کاربری دلخواه" required>
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">📧 ایمیل:</label> <input type="email" id="regEmail" class="input-3d border-cyan-400" placeholder="example@email.com" required>
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">📱 شماره تماس:</label> <input type="tel" id="regPhone" class="input-3d border-cyan-400" placeholder="09123456789" required>
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">🔑 رمز عبور:</label> <input type="password" id="regPassword" class="input-3d border-cyan-400" placeholder="رمز عبور قوی انتخاب کنید" required minlength="6">
+       </div>
+       <div><label class="block text-xl font-bold text-cyan-400 mb-3">🔁 تکرار رمز عبور:</label> <input type="password" id="regPasswordConfirm" class="input-3d border-cyan-400" placeholder="رمز عبور را دوباره وارد کنید" required>
+       </div>
+       <div class="progress-bar">
+        <div class="progress-fill" id="passwordStrength" style="width: 0%"></div>
+       </div>
+       <p class="text-center text-cyan-300" id="strengthText">قدرت رمز: ضعیف</p><button type="submit" class="btn-3d btn-green w-full px-8 py-5 rounded-xl text-2xl font-black">✅ ثبت‌نام</button>
+      </div>
+     </form>
+    </div>
+   </div>
+  </div><!-- PREMIUM PAGE (FOR FIRST 100 USERS) -->
+  <div id="premiumPage" class="page pt-28 pb-16 px-6 bg-matrix-orange">
+   <div class="max-w-6xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <div class="text-center mb-12">
+     <h1 class="text-6xl font-black neon-orange mb-6">🎉 تبریک! شما جزو 100 نفر اول هستید</h1>
+     <p class="text-3xl text-orange-300">⭐ دسترسی ویژه VIP به 50 سورس کد حرفه‌ای پایتون</p>
+     <div class="mt-6"><span class="badge border-yellow-400 bg-yellow-900 bg-opacity-50 text-yellow-300 text-2xl px-8 py-4"> 🏆 عضو PREMIUM </span>
+     </div>
+    </div>
+    <div id="premiumCodes" class="space-y-6"></div>
+   </div>
+  </div><!-- CONTACT PAGE -->
+  <div id="contactPage" class="page pt-28 pb-16 px-6 bg-matrix-green">
+   <div class="max-w-5xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <h1 class="text-6xl font-black text-center neon-green mb-16">📞 ارتباط با امیرعلی بافتی</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       ☎️
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">تماس تلفنی</h3>
+      <p class="text-5xl font-black text-yellow-400 mb-8" dir="ltr">09926274950</p><a href="tel:09926274950" target="_blank" rel="noopener noreferrer" class="btn-3d btn-green px-10 py-5 rounded-xl text-xl font-black inline-block">📞 تماس بگیرید</a>
+     </div>
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       💬
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">پیامک</h3>
+      <p class="text-5xl font-black text-yellow-400 mb-8" dir="ltr">09926274950</p><a href="sms:09926274950" target="_blank" rel="noopener noreferrer" class="btn-3d btn-blue px-10 py-5 rounded-xl text-xl font-black inline-block">💬 ارسال پیام</a>
+     </div>
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       📧
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">جیمیل</h3>
+      <p class="text-3xl font-black text-yellow-400 mb-8 break-all" dir="ltr">amiralibafi10@gmail.com</p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=amiralibafi10@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-3d btn-red px-10 py-5 rounded-xl text-xl font-black inline-block">📧 ارسال ایمیل</a>
+     </div>
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       💎
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">روبیکا</h3>
+      <p class="text-4xl font-black text-yellow-400 mb-8" dir="ltr">09926274950</p><button onclick="showToast('پیام خود را به شماره 09926274950 در روبیکا ارسال کنید! 💎', 'green')" class="btn-3d btn-purple px-10 py-5 rounded-xl text-xl font-black">💎 روبیکا</button>
+     </div>
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       📱
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">واتساپ</h3>
+      <p class="text-4xl font-black text-yellow-400 mb-8" dir="ltr">09926274950</p><a href="https://wa.me/989926274950" target="_blank" rel="noopener noreferrer" class="btn-3d btn-lime px-10 py-5 rounded-xl text-xl font-black inline-block">📱 واتساپ</a>
+     </div>
+     <div class="card-3d border-green-400 text-center">
+      <div class="text-7xl mb-6">
+       📲
+      </div>
+      <h3 class="text-3xl font-black neon-green mb-6">تلگرام</h3>
+      <p class="text-4xl font-black text-yellow-400 mb-8">@amiralibafti</p><a href="https://t.me/amiralibafti" target="_blank" rel="noopener noreferrer" class="btn-3d btn-cyan px-10 py-5 rounded-xl text-xl font-black inline-block">📲 تلگرام</a>
+     </div>
+    </div><!-- SOCIAL MEDIA -->
+    <div class="mt-12">
+     <h2 class="text-4xl font-black text-center neon-yellow mb-8">🌐 شبکه‌های اجتماعی</h2>
+     <div class="flex justify-center gap-6 flex-wrap"><button class="btn-3d btn-blue px-8 py-4 rounded-xl text-xl">🔵 اینستاگرام</button> <button class="btn-3d btn-red px-8 py-4 rounded-xl text-xl">🔴 یوتیوب</button> <button class="btn-3d btn-purple px-8 py-4 rounded-xl text-xl">💜 توییتر</button> <button class="btn-3d btn-cyan px-8 py-4 rounded-xl text-xl">💼 لینکدین</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- USAGE PAGE (150 CODES) -->
+  <div id="usagePage" class="page pt-28 pb-16 px-6 bg-matrix-yellow">
+   <div class="max-w-6xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <h1 class="text-6xl font-black text-center neon-yellow mb-16">⚙️ 150 کد کاربردی پایتون</h1>
+    <div class="flex justify-center gap-4 mb-8 flex-wrap"><button onclick="filterUsageCodes('all')" class="btn-3d btn-yellow px-6 py-3 rounded-xl">همه</button> <button onclick="filterUsageCodes('math')" class="btn-3d btn-green px-6 py-3 rounded-xl">محاسبات</button> <button onclick="filterUsageCodes('string')" class="btn-3d btn-blue px-6 py-3 rounded-xl">رشته‌ها</button> <button onclick="filterUsageCodes('file')" class="btn-3d btn-purple px-6 py-3 rounded-xl">فایل‌ها</button>
+    </div>
+    <div id="usageCodes" class="space-y-6"></div>
+   </div>
+  </div><!-- HACKING PAGE (30 CODES) -->
+  <div id="hackingPage" class="page pt-28 pb-16 px-6 bg-matrix-red">
+   <div class="max-w-6xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-blue px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <h1 class="text-6xl font-black text-center neon-red mb-8 glitch">💀 30 سورس کد هکینگ</h1>
+    <div class="bg-red-900 bg-opacity-40 border-4 border-red-500 rounded-2xl p-8 mb-12 text-center">
+     <p class="text-3xl font-black text-yellow-400">⚠️ فقط برای اهداف آموزشی و اخلاقی</p>
+     <p class="text-xl text-red-300 mt-4">استفاده غیرقانونی ممنوع و جرم است</p>
+     <p class="text-lg text-orange-300 mt-2">🔐 هکینگ اخلاقی = کمک به امنیت سایبری</p>
+    </div>
+    <div id="hackingCodes" class="space-y-6"></div>
+   </div>
+  </div><!-- COURSES LIST PAGE -->
+  <div id="coursesListPage" class="page pt-28 pb-16 px-6 bg-matrix-green">
+   <div class="max-w-7xl mx-auto"><button onclick="showPage('homePage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <h1 class="text-6xl font-black text-center neon-green mb-12">🎓 200 دوره فوق‌حرفه‌ای</h1><!-- FILTER BUTTONS -->
+    <div class="flex justify-center gap-4 mb-12 flex-wrap"><button onclick="filterCourses('all')" class="btn-3d btn-green px-6 py-3 rounded-xl">همه دوره‌ها</button> <button onclick="filterCourses('beginner')" class="btn-3d btn-blue px-6 py-3 rounded-xl">مقدماتی</button> <button onclick="filterCourses('intermediate')" class="btn-3d btn-yellow px-6 py-3 rounded-xl">متوسط</button> <button onclick="filterCourses('advanced')" class="btn-3d btn-red px-6 py-3 rounded-xl">پیشرفته</button> <button onclick="filterCourses('professional')" class="btn-3d btn-purple px-6 py-3 rounded-xl">حرفه‌ای</button>
+    </div>
+    <div id="coursesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+   </div>
+  </div><!-- PAYMENT NOTICE PAGE -->
+  <div id="paymentNoticePage" class="page pt-28 pb-16 px-6 bg-matrix-purple">
+   <div class="max-w-4xl mx-auto"><button onclick="showPage('coursesListPage')" class="btn-3d btn-red px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <div class="card-3d border-purple-500 text-center">
+     <h1 class="text-5xl font-black neon-purple mb-12">⚠️ اطلاعیه مهم پرداخت</h1>
+     <div class="bg-yellow-600 bg-opacity-20 border-4 border-yellow-400 rounded-2xl p-10 mb-10">
+      <p class="text-3xl font-bold text-yellow-300 leading-relaxed">به دلیل مشکلات فنی، صفحه پرداخت آنلاین فعال نمی‌باشد.</p>
+     </div>
+     <div class="bg-green-600 bg-opacity-20 border-4 border-green-400 rounded-2xl p-10 mb-10">
+      <h3 class="text-3xl font-black text-green-400 mb-6">🏦 اطلاعات پرداخت:</h3>
+      <p class="text-2xl text-cyan-300 mb-4">شماره کارت:</p>
+      <p class="text-4xl font-black text-yellow-400 mb-6 code-font" dir="ltr" id="cardNumber">6037-9974-1234-5678</p>
+      <p class="text-2xl text-cyan-300 mb-4">به نام: <span class="text-yellow-400 font-black">مهدی بافتی</span></p>
+      <p class="text-xl text-green-300 mt-4">🏦 بانک: ملی ایران</p>
+     </div>
+     <div class="bg-blue-600 bg-opacity-20 border-4 border-blue-400 rounded-2xl p-10 mb-10">
+      <p class="text-2xl text-blue-300 leading-relaxed">پس از واریز مبلغ دوره، رسید پرداخت را به شماره <span class="text-yellow-400 font-black text-3xl">09926274950</span> در <span class="text-purple-400 font-black">روبیکا</span> ارسال کنید.</p>
+      <p class="text-lg text-cyan-300 mt-4">✅ بعد از تأیید پرداخت، دسترسی شما فعال می‌شود</p>
+     </div><button onclick="showCoursePage()" class="btn-3d btn-green px-12 py-6 rounded-2xl text-2xl font-black">✅ واریز کردم</button>
+    </div>
+   </div>
+  </div><!-- COURSE DETAIL PAGE -->
+  <div id="courseDetailPage" class="page pt-28 pb-16 px-6 bg-matrix-red">
+   <div class="max-w-6xl mx-auto"><button onclick="showPage('paymentNoticePage')" class="btn-3d btn-blue px-6 py-3 rounded-xl mb-8">← بازگشت</button>
+    <div id="courseDetailContent"></div>
+   </div>
+  </div>
+  <script>
+        // ==================== VISITOR COUNTER ====================
+        let visitorCount = Math.floor(Math.random() * 50000) + 10000;
+        
+        function updateVisitorCount() {
+            visitorCount += Math.floor(Math.random() * 5) + 1;
+            document.getElementById('visitorCount').textContent = visitorCount.toLocaleString();
+        }
+        
+        setInterval(updateVisitorCount, 5000);
+        
+        // ==================== MATRIX RAIN ====================
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        let matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+        let matrixColor = '#00d4ff';
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = matrixColor;
+            ctx.font = `${fontSize}px monospace`;
+            
+            for (let i = 0; i < drops.length; i++) {
+                const char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+                
+                ctx.fillText(char, x, y);
+                
+                if (y > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 50);
+        
+        // ==================== PARTICLES EFFECT ====================
+        const particlesCanvas = document.getElementById('particles-canvas');
+        const particlesCtx = particlesCanvas.getContext('2d');
+        
+        particlesCanvas.width = window.innerWidth;
+        particlesCanvas.height = window.innerHeight;
+        
+        const particles = [];
+        const particleCount = 100;
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * particlesCanvas.width,
+                y: Math.random() * particlesCanvas.height,
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                radius: Math.random() * 2 + 1
+            });
+        }
+        
+        function drawParticles() {
+            particlesCtx.clearRect(0, 0, particlesCanvas.width, particlesCanvas.height);
+            particlesCtx.fillStyle = matrixColor;
+            
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                if (p.x < 0 || p.x > particlesCanvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > particlesCanvas.height) p.vy *= -1;
+                
+                particlesCtx.beginPath();
+                particlesCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                particlesCtx.fill();
+            });
+            
+            // Draw connections
+            particlesCtx.strokeStyle = matrixColor;
+            particlesCtx.globalAlpha = 0.2;
+            particles.forEach((p1, i) => {
+                particles.slice(i + 1).forEach(p2 => {
+                    const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+                    if (dist < 150) {
+                        particlesCtx.beginPath();
+                        particlesCtx.moveTo(p1.x, p1.y);
+                        particlesCtx.lineTo(p2.x, p2.y);
+                        particlesCtx.stroke();
+                    }
+                });
+            });
+            particlesCtx.globalAlpha = 1;
+        }
+        
+        setInterval(drawParticles, 50);
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particlesCanvas.width = window.innerWidth;
+            particlesCanvas.height = window.innerHeight;
+        });
+        
+        // ==================== COUNTDOWN TIMER ====================
+        let countdown = 24 * 60 * 60; // 24 hours
+        
+        function updateCountdown() {
+            const hours = Math.floor(countdown / 3600);
+            const minutes = Math.floor((countdown % 3600) / 60);
+            const seconds = countdown % 60;
+            
+            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            const timerEl = document.getElementById('countdownTimer');
+            if (timerEl) timerEl.textContent = display;
+            
+            countdown--;
+            if (countdown < 0) countdown = 24 * 60 * 60;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        
+        // ==================== PASSWORD STRENGTH ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            const passwordInput = document.getElementById('regPassword');
+            if (passwordInput) {
+                passwordInput.addEventListener('input', (e) => {
+                    const password = e.target.value;
+                    let strength = 0;
+                    
+                    if (password.length >= 6) strength += 25;
+                    if (password.length >= 10) strength += 25;
+                    if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength += 25;
+                    if (/[0-9]/.test(password)) strength += 15;
+                    if (/[^a-zA-Z0-9]/.test(password)) strength += 10;
+                    
+                    const strengthBar = document.getElementById('passwordStrength');
+                    const strengthText = document.getElementById('strengthText');
+                    
+                    if (strengthBar) strengthBar.style.width = strength + '%';
+                    
+                    if (strengthText) {
+                        if (strength < 50) {
+                            strengthText.textContent = 'قدرت رمز: ضعیف ❌';
+                            strengthText.style.color = '#ff0040';
+                        } else if (strength < 75) {
+                            strengthText.textContent = 'قدرت رمز: متوسط ⚠️';
+                            strengthText.style.color = '#ffff00';
+                        } else {
+                            strengthText.textContent = 'قدرت رمز: قوی ✅';
+                            strengthText.style.color = '#00ff41';
+                        }
+                    }
+                });
+            }
+        });
+        
+        // ==================== MUSIC TOGGLE ====================
+        let musicPlaying = false;
+        
+        function toggleMusic() {
+            musicPlaying = !musicPlaying;
+            const btn = document.getElementById('musicBtn');
+            if (musicPlaying) {
+                btn.textContent = '🔇 قطع موسیقی';
+                showToast('موسیقی سایبری فعال شد! 🎵');
+            } else {
+                btn.textContent = '🎵 موسیقی';
+                showToast('موسیقی متوقف شد! 🔇');
+            }
+        }
+        
+        // ==================== DATA SDK ====================
+        let currentUser = null;
+        let allUsers = [];
+        let registrationCount = 0;
+        
+        const dataHandler = {
+            onDataChanged(data) {
+                allUsers = data;
+                registrationCount = data.length;
+                
+                const userCountEl = document.getElementById('userCount');
+                if (userCountEl) userCountEl.textContent = registrationCount;
+                
+                const userEmail = localStorage.getItem('currentUserEmail');
+                if (userEmail) {
+                    currentUser = data.find(u => u.email === userEmail);
+                    updateAuthButton();
+                }
+            }
+        };
+        
+        async function initDataSDK() {
+            if (window.dataSdk) {
+                const result = await window.dataSdk.init(dataHandler);
+                if (result.isOk) {
+                    console.log('Data SDK initialized');
+                } else {
+                    console.error('Failed to initialize Data SDK');
+                }
+            }
+        }
+        
+        initDataSDK();
+        
+        function updateAuthButton() {
+            const btn = document.getElementById('authBtn');
+            if (currentUser) {
+                btn.innerHTML = `👤 ${currentUser.username}`;
+                btn.classList.remove('btn-white-black');
+                btn.classList.add('btn-green');
+            }
+        }
+        
+        // ==================== PAGE NAVIGATION ====================
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Change matrix effect based on page
+                if (pageId === 'aiPage') {
+                    matrixChars = 'AI';
+                    matrixColor = '#b967ff';
+                } else {
+                    matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+                    matrixColor = '#00d4ff';
+                }
+            }
+        }
+        
+        // ==================== TOAST NOTIFICATION ====================
+        function showToast(message, color = 'green') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.style.borderColor = color === 'green' ? '#00ff41' : '#00d4ff';
+            toast.style.color = color === 'green' ? '#00ff41' : '#00d4ff';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => toast.remove(), 3000);
+        }
+        
+        // ==================== THEME SYSTEM ====================
+        const themes = [];
+        const themeColors = [
+            { name: 'آبی کلاسیک', primary: '#00d4ff', class: 'bg-matrix-blue' },
+            { name: 'بنفش جادویی', primary: '#b967ff', class: 'bg-matrix-purple' },
+            { name: 'فیروزه‌ای', primary: '#00ffff', class: 'bg-matrix-cyan' },
+            { name: 'سبز نئون', primary: '#00ff41', class: 'bg-matrix-green' },
+            { name: 'قرمز آتشین', primary: '#ff0040', class: 'bg-matrix-red' },
+            { name: 'نارنجی غروب', primary: '#ff9500', class: 'bg-matrix-orange' },
+            { name: 'زرد طلایی', primary: '#ffff00', class: 'bg-matrix-yellow' },
+            { name: 'صورتی رویایی', primary: '#ff69b4', class: 'bg-matrix-purple' },
+            { name: 'یشمی تیره', primary: '#00a86b', class: 'bg-matrix-green' },
+            { name: 'لیمویی درخشان', primary: '#ccff00', class: 'bg-matrix-yellow' }
+        ];
+        
+        // Generate 100 themes
+        for (let i = 0; i < 100; i++) {
+            const base = themeColors[i % themeColors.length];
+            themes.push({
+                id: i + 1,
+                name: `${base.name} ${i + 1}`,
+                color: base.primary,
+                bgClass: base.class
+            });
+        }
+        
+        function showThemeModal() {
+            const modal = document.getElementById('themeModal');
+            const grid = document.getElementById('themesGrid');
+            grid.innerHTML = '';
+            
+            themes.forEach(theme => {
+                const div = document.createElement('div');
+                div.className = `theme-card ${theme.bgClass}`;
+                div.style.borderColor = theme.color;
+                div.innerHTML = `
+                    <div class="text-5xl mb-4">🎨</div>
+                    <div class="text-xl font-black mb-2" style="color: ${theme.color}">${theme.name}</div>
+                `;
+                div.onclick = () => applyTheme(theme);
+                grid.appendChild(div);
+            });
+            
+            modal.classList.add('active');
+        }
+        
+        function closeThemeModal() {
+            document.getElementById('themeModal').classList.remove('active');
+        }
+        
+        function applyTheme(theme) {
+            document.body.className = `h-full w-full ${theme.bgClass} overflow-auto`;
+            matrixColor = theme.color;
+            showToast(`تم "${theme.name}" فعال شد! ✨`);
+            closeThemeModal();
+        }
+        
+        function searchThemes() {
+            const searchTerm = document.getElementById('themeSearch').value.toLowerCase();
+            const grid = document.getElementById('themesGrid');
+            grid.innerHTML = '';
+            
+            const filtered = themes.filter(t => t.name.toLowerCase().includes(searchTerm));
+            
+            filtered.forEach(theme => {
+                const div = document.createElement('div');
+                div.className = `theme-card ${theme.bgClass}`;
+                div.style.borderColor = theme.color;
+                div.innerHTML = `
+                    <div class="text-5xl mb-4">🎨</div>
+                    <div class="text-xl font-black mb-2" style="color: ${theme.color}">${theme.name}</div>
+                `;
+                div.onclick = () => applyTheme(theme);
+                grid.appendChild(div);
+            });
+        }
+        
+        // ==================== LOGIN/REGISTER ====================
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+        
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+        
+        async function handleLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            const user = allUsers.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('currentUserEmail', email);
+                showToast('ورود موفقیت‌آمیز! خوش آمدید 🎉');
+                updateAuthButton();
+                
+                if (user.is_premium) {
+                    setTimeout(() => showPage('premiumPage'), 1000);
+                } else {
+                    setTimeout(() => showPage('homePage'), 1000);
+                }
+            } else {
+                showToast('ایمیل یا رمز عبور اشتباه است! ❌');
+            }
+        }
+        
+        async function handleRegister(e) {
+            e.preventDefault();
+            
+            const fullname = document.getElementById('regFullname').value;
+            const username = document.getElementById('regUsername').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regPasswordConfirm').value;
+            
+            if (password !== confirmPassword) {
+                showToast('رمز عبور و تکرار آن یکسان نیستند! ❌');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showToast('رمز عبور باید حداقل 6 کاراکتر باشد! ❌');
+                return;
+            }
+            
+            const existingUser = allUsers.find(u => u.email === email);
+            if (existingUser) {
+                showToast('این ایمیل قبلاً ثبت شده است! ⚠️');
+                return;
+            }
+            
+            if (registrationCount >= 999) {
+                showToast('ظرفیت ثبت‌نام تکمیل شده است! ❌');
+                return;
+            }
+            
+            const newUser = {
+                id: Date.now().toString(),
+                username,
+                email,
+                password,
+                phone,
+                fullname,
+                registered_date: new Date().toISOString(),
+                is_premium: registrationCount < 100,
+                registration_number: registrationCount + 1
+            };
+            
+            const result = await window.dataSdk.create(newUser);
+            
+            if (result.isOk) {
+                currentUser = newUser;
+                localStorage.setItem('currentUserEmail', email);
+                showToast(`ثبت‌نام موفق! شما کاربر شماره ${newUser.registration_number} هستید 🎉`);
+                updateAuthButton();
+                
+                document.getElementById('registerForm').reset();
+                
+                if (newUser.is_premium) {
+                    setTimeout(() => {
+                        showToast('شما جزو 100 نفر اول هستید! دسترسی ویژه فعال شد 🌟');
+                        setTimeout(() => showPage('premiumPage'), 1500);
+                    }, 1000);
+                } else {
+                    setTimeout(() => showPage('homePage'), 1500);
+                }
+            } else {
+                showToast('خطا در ثبت‌نام! لطفاً دوباره تلاش کنید ❌');
+            }
+        }
+        
+        // ==================== AI SYSTEM ====================
+        let currentAI = 1;
+        
+        const pythonKnowledge = {
+            "پایتون چیست": "پایتون یک زبان برنامه‌نویسی سطح بالا، تفسیری و شی‌گرا است که توسط Guido van Rossum در سال 1991 ایجاد شد. این زبان به دلیل سادگی، خوانایی و قدرت بالا بسیار محبوب است و در زمینه‌های وب، هوش مصنوعی، علم داده، هکینگ و اتوماسیون استفاده می‌شود.",
+            "متغیر": "در پایتون، متغیرها برای ذخیره داده‌ها استفاده می‌شوند. مثال: x = 10 یا name = 'Ali'. پایتون نوع متغیر را خودکار تشخیص می‌دهد (Dynamic Typing).",
+            "لیست": "لیست یک ساختار داده است که می‌تواند چند مقدار را ذخیره کند. مثال: numbers = [1, 2, 3, 4, 5]. می‌توانید با append() عنصر اضافه، با remove() حذف و با sort() مرتب کنید.",
+            "تابع": "تابع بلوکی از کد قابل استفاده مجدد است. با def تعریف می‌شود. مثال: def greet(name): return f'سلام {name}'",
+            "حلقه for": "برای تکرار روی یک دنباله استفاده می‌شود. مثال: for i in range(10): print(i)",
+            "حلقه while": "تا زمانی که شرط درست باشد، اجرا می‌شود. مثال: while x < 10: x += 1",
+            "شرط if": "برای تصمیم‌گیری استفاده می‌شود. مثال: if score > 90: print('عالی') elif score > 70: print('خوب') else: print('قبول')",
+            "دیکشنری": "ساختار داده کلید-مقدار. مثال: person = {'name': 'Ali', 'age': 25}. با person['name'] به مقادیر دسترسی پیدا کنید.",
+            "کلاس": "قالبی برای ساخت اشیا. با class تعریف می‌شود. مثال: class Person: def __init__(self, name): self.name = name",
+            "ماژول": "فایلی حاوی کدهای پایتون که می‌توان وارد کرد. مثال: import math یا from math import sqrt",
+            "خطا": "با try-except می‌توان خطاها را مدیریت کرد. مثال: try: result = 10/0 except ZeroDivisionError: print('نمی‌توان بر صفر تقسیم کرد')",
+            "فایل": "با open() می‌توان فایل خواند/نوشت. مثال: with open('file.txt', 'r') as f: content = f.read()",
+            "lambda": "تابع بی‌نام کوچک. مثال: square = lambda x: x**2",
+            "numpy": "کتابخانه قدرتمند برای محاسبات عددی و آرایه‌های چند بعدی. import numpy as np",
+            "pandas": "کتابخانه تحلیل و دستکاری داده. برای کار با DataFrame و CSV.",
+            "django": "فریم‌ورک وب قدرتمند برای ساخت وب‌سایت‌های پیچیده با امنیت بالا.",
+            "flask": "فریم‌ورک وب سبک و انعطاف‌پذیر برای وب‌اپلیکیشن‌های کوچک تا متوسط.",
+            "requests": "کتابخانه برای ارسال درخواست HTTP و کار با API.",
+            "selenium": "برای اتوماسیون مرورگر، تست وب و web scraping.",
+            "tensorflow": "فریم‌ورک یادگیری عمیق گوگل برای ساخت مدل‌های AI."
+        };
+        
+        const codeTemplates = {
+            "شمارش 1 تا 10": "# شمارش اعداد از 1 تا 10\nfor i in range(1, 11):\n    print(i)",
+            "جمع دو عدد": "# جمع دو عدد\na = int(input('عدد اول: '))\nb = int(input('عدد دوم: '))\nprint(f'جمع: {a + b}')",
+            "زوج فرد": "# تشخیص زوج یا فرد\nnum = int(input('عدد: '))\nif num % 2 == 0:\n    print('زوج')\nelse:\n    print('فرد')",
+            "فاکتوریل": "# محاسبه فاکتوریل\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\n\nnum = int(input('عدد: '))\nprint(f'فاکتوریل {num} = {factorial(num)}')",
+            "فیبوناچی": "# دنباله فیبوناچی\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nfor i in range(10):\n    print(fibonacci(i), end=' ')",
+            "معکوس رشته": "# معکوس کردن رشته\ntext = input('متن: ')\nprint('معکوس:', text[::-1])",
+            "بزرگترین عدد": "# یافتن بزرگترین عدد\nnumbers = [int(input(f'عدد {i+1}: ')) for i in range(3)]\nprint(f'بزرگترین: {max(numbers)}')",
+            "مرتب‌سازی": "# مرتب‌سازی لیست\nnumbers = [5, 2, 8, 1, 9, 3]\nnumbers.sort()\nprint('مرتب شده:', numbers)",
+            "کپی فایل": "# کپی فایل\nwith open('source.txt', 'r') as src:\n    with open('dest.txt', 'w') as dst:\n        dst.write(src.read())\nprint('فایل کپی شد')",
+            "اعداد اول": "# یافتن اعداد اول\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nfor i in range(2, 50):\n    if is_prime(i):\n        print(i, end=' ')"
+        };
+        
+        function switchAI(aiNum) {
+            currentAI = currentAI === 1 ? 2 : 1;
+            loadAI();
+        }
+        
+        function loadAI() {
+            const container = document.getElementById('aiInterface');
+            const aiNameEl = document.getElementById('currentAIName');
+            
+            if (currentAI === 1) {
+                if (aiNameEl) aiNameEl.textContent = 'AI دانش پایتون';
+                container.innerHTML = `
+                    <h2 class="text-4xl font-black neon-purple text-center mb-8">🤖 هوش مصنوعی دانش پایتون</h2>
+                    <p class="text-2xl text-purple-300 text-center mb-8">سوال خود درباره پایتون را بپرسید</p>
+                    <div class="mb-6">
+                        <input type="text" id="aiQuestion" class="input-3d border-purple-500" placeholder="مثال: پایتون چیست؟ / متغیر / لیست / تابع / numpy / django">
+                    </div>
+                    <button onclick="askAI()" class="btn-3d btn-purple w-full px-8 py-5 rounded-xl text-2xl font-black mb-8">🔍 پرسش</button>
+                    <div id="aiResponse" class="space-y-4 max-h-96 overflow-y-auto"></div>
+                `;
+            } else {
+                if (aiNameEl) aiNameEl.textContent = 'AI کدساز پایتون';
+                container.innerHTML = `
+                    <h2 class="text-4xl font-black neon-red text-center mb-8">🔥 هوش مصنوعی کدساز پایتون</h2>
+                    <p class="text-2xl text-red-300 text-center mb-8">توضیح دهید چه کدی می‌خواهید</p>
+                    <div class="mb-6">
+                        <input type="text" id="codeRequest" class="input-3d border-red-500" placeholder="مثال: شمارش 1 تا 10 / جمع دو عدد / زوج فرد / فاکتوریل / فیبوناچی">
+                    </div>
+                    <button onclick="generateCode()" class="btn-3d btn-red w-full px-8 py-5 rounded-xl text-2xl font-black mb-8">⚡ تولید کد</button>
+                    <div id="codeOutput" class="space-y-4 max-h-96 overflow-y-auto"></div>
+                `;
+            }
+        }
+        
+        function askAI() {
+            const question = document.getElementById('aiQuestion').value.trim();
+            const responseDiv = document.getElementById('aiResponse');
+            
+            if (!question) {
+                showToast('لطفاً سوال خود را وارد کنید! ⚠️');
+                return;
+            }
+            
+            const userMsg = document.createElement('div');
+            userMsg.className = 'ai-message user-message';
+            userMsg.innerHTML = `<p class="text-xl text-blue-300"><strong>شما:</strong> ${question}</p>`;
+            responseDiv.appendChild(userMsg);
+            
+            let answer = "متأسفم، اطلاعاتی درباره این موضوع ندارم. لطفاً سوال دیگری بپرسید یا از کلمات کلیدی مثل: پایتون، متغیر، لیست، تابع، حلقه، شرط، کلاس، ماژول، numpy، pandas، django، flask استفاده کنید.";
+            
+            for (const [key, value] of Object.entries(pythonKnowledge)) {
+                if (question.includes(key) || key.includes(question)) {
+                    answer = value;
+                    break;
+                }
+            }
+            
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'ai-message ai-response';
+                aiMsg.innerHTML = `<p class="text-xl text-purple-300"><strong>🤖 AI:</strong> ${answer}</p>`;
+                responseDiv.appendChild(aiMsg);
+                responseDiv.scrollTop = responseDiv.scrollHeight;
+            }, 800);
+            
+            document.getElementById('aiQuestion').value = '';
+        }
+        
+        function generateCode() {
+            const request = document.getElementById('codeRequest').value.trim();
+            const outputDiv = document.getElementById('codeOutput');
+            
+            if (!request) {
+                showToast('لطفاً توضیح دهید چه کدی می‌خواهید! ⚠️');
+                return;
+            }
+            
+            const userMsg = document.createElement('div');
+            userMsg.className = 'ai-message user-message';
+            userMsg.innerHTML = `<p class="text-xl text-blue-300"><strong>شما:</strong> ${request}</p>`;
+            outputDiv.appendChild(userMsg);
+            
+            let code = "# متأسفم، کد مورد نظر یافت نشد\n# لطفاً از عبارات دقیق‌تر استفاده کنید\n# مثال: 'شمارش 1 تا 10' یا 'جمع دو عدد' یا 'زوج فرد'\n\nprint('کد یافت نشد')";
+            let foundKey = "";
+            
+            for (const [key, value] of Object.entries(codeTemplates)) {
+                if (request.includes(key) || key.includes(request)) {
+                    code = value;
+                    foundKey = key;
+                    break;
+                }
+            }
+            
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'code-box border-red-500';
+                aiMsg.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-2xl font-bold text-red-400">🔥 کد تولید شده${foundKey ? `: ${foundKey}` : ''}</h4>
+                        <button onclick="copyCodeText(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <pre class="code-text">${code}</pre>
+                `;
+                outputDiv.appendChild(aiMsg);
+                outputDiv.scrollTop = outputDiv.scrollHeight;
+            }, 1000);
+            
+            document.getElementById('codeRequest').value = '';
+        }
+        
+        // ==================== CODE FUNCTIONS ====================
+        function copyCode(button) {
+            const codeBlock = button.nextElementSibling;
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const original = button.textContent;
+                button.textContent = '✅ کپی شد!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = original;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+                showToast('کد کپی شد! ✅');
+            });
+        }
+        
+        function copyCodeText(button) {
+            const pre = button.closest('.code-box').querySelector('pre');
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                const original = button.textContent;
+                button.textContent = '✅ کپی شد!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = original;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+                showToast('کد کپی شد! ✅');
+            });
+        }
+        
+        // ==================== FILTER FUNCTIONS ====================
+        let allCodesData = [];
+        
+        function filterCodes(type) {
+            const container = document.getElementById('mainPythonCodes');
+            container.innerHTML = '';
+            
+            const filtered = type === 'all' ? allCodesData : allCodesData.filter(c => c.level === type);
+            
+            filtered.forEach(codeData => {
+                const div = document.createElement('div');
+                div.className = 'code-box border-cyan-400';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-cyan-400">${codeData.id}. ${codeData.title}</h3>
+                        <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <pre class="code-text">${codeData.code}</pre>
+                    <p class="text-blue-300 mt-3 text-sm">💡 ${codeData.desc}</p>
+                    <span class="badge border-yellow-400 bg-yellow-900 bg-opacity-30 text-yellow-400 mt-3">${codeData.levelText}</span>
+                `;
+                container.appendChild(div);
+            });
+        }
+        
+        // ==================== GENERATE CODES ====================
+        function generateCode_100Main() {
+            const container = document.getElementById('mainPythonCodes');
+            container.innerHTML = '';
+            
+            const codes = [
+                { title: 'چاپ سلام دنیا', code: 'print("سلام دنیا!")', desc: 'اولین برنامه پایتون', level: 'basic' },
+                { title: 'جمع دو عدد', code: 'a = 10\nb = 20\nprint(a + b)', desc: 'عملیات ریاضی ساده', level: 'basic' },
+                { title: 'ورودی از کاربر', code: 'name = input("نام: ")\nprint(f"سلام {name}")', desc: 'دریافت ورودی', level: 'basic' },
+                { title: 'حلقه for', code: 'for i in range(10):\n    print(i)', desc: 'حلقه تکرار', level: 'basic' },
+                { title: 'شرط if-else', code: 'age = 20\nif age >= 18:\n    print("بزرگسال")\nelse:\n    print("نوجوان")', desc: 'تصمیم‌گیری', level: 'basic' },
+                { title: 'لیست', code: 'fruits = ["سیب", "موز", "پرتقال"]\nprint(fruits)', desc: 'ساختار داده لیست', level: 'intermediate' },
+                { title: 'دیکشنری', code: 'person = {"name": "علی", "age": 25}\nprint(person["name"])', desc: 'کلید-مقدار', level: 'intermediate' },
+                { title: 'تابع', code: 'def greet(name):\n    return f"سلام {name}"\nprint(greet("علی"))', desc: 'تعریف تابع', level: 'intermediate' },
+                { title: 'کلاس', code: 'class Person:\n    def __init__(self, name):\n        self.name = name\np = Person("علی")', desc: 'شی‌گرایی', level: 'advanced' },
+                { title: 'مدیریت خطا', code: 'try:\n    result = 10/0\nexcept:\n    print("خطا")', desc: 'try-except', level: 'advanced' }
+            ];
+            
+            allCodesData = [];
+            
+            for (let i = 0; i < 100; i++) {
+                const base = codes[i % codes.length];
+                const levelTexts = { basic: 'مقدماتی', intermediate: 'متوسط', advanced: 'پیشرفته' };
+                
+                const codeData = {
+                    id: i + 1,
+                    title: `${base.title} ${Math.floor(i / codes.length) + 1}`,
+                    code: base.code,
+                    desc: base.desc,
+                    level: base.level,
+                    levelText: levelTexts[base.level]
+                };
+                
+                allCodesData.push(codeData);
+                
+                const div = document.createElement('div');
+                div.className = 'code-box border-cyan-400';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-cyan-400">${codeData.id}. ${codeData.title}</h3>
+                        <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <pre class="code-text">${codeData.code}</pre>
+                    <p class="text-blue-300 mt-3 text-sm">💡 ${codeData.desc}</p>
+                    <span class="badge border-yellow-400 bg-yellow-900 bg-opacity-30 text-yellow-400 mt-3">${codeData.levelText}</span>
+                `;
+                container.appendChild(div);
+            }
+        }
+        
+        function generateCode_150Usage() {
+            const container = document.getElementById('usageCodes');
+            container.innerHTML = '';
+            
+            const usageCodes = [
+                { title: 'محاسبه مساحت مربع', desc: 'محاسبه مساحت با دریافت طول ضلع', code: 'side = float(input("طول ضلع: "))\narea = side ** 2\nprint(f"مساحت: {area}")' },
+                { title: 'تبدیل دما', desc: 'تبدیل سانتیگراد به فارنهایت', code: 'celsius = float(input("دما (C): "))\nfahrenheit = (celsius * 9/5) + 32\nprint(f"{celsius}°C = {fahrenheit}°F")' },
+                { title: 'شمارش حروف', desc: 'شمارش تعداد حروف در متن', code: 'text = input("متن: ")\nprint(f"تعداد حروف: {len(text)}")' },
+                { title: 'معکوس رشته', desc: 'معکوس کردن یک رشته متنی', code: 'text = input("متن: ")\nprint("معکوس:", text[::-1])' },
+                { title: 'فاکتوریل', desc: 'محاسبه فاکتوریل یک عدد', code: 'def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\nnum = int(input("عدد: "))\nprint(f"فاکتوریل: {factorial(num)}")' }
+            ];
+            
+            for (let i = 0; i < 150; i++) {
+                const base = usageCodes[i % usageCodes.length];
+                const div = document.createElement('div');
+                div.className = 'code-box border-yellow-400';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-yellow-400">${i + 1}. ${base.title}</h3>
+                        <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <p class="text-yellow-300 mb-3">📝 ${base.desc}</p>
+                    <pre class="code-text">${base.code}</pre>
+                `;
+                container.appendChild(div);
+            }
+        }
+        
+        function generateCode_30Hacking() {
+            const container = document.getElementById('hackingCodes');
+            container.innerHTML = '';
+            
+            const hackingCodes = [
+                { title: 'Port Scanner', desc: 'اسکن پورت‌های باز', code: 'import socket\n\ndef scan_port(host, port):\n    try:\n        sock = socket.socket()\n        sock.settimeout(1)\n        result = sock.connect_ex((host, port))\n        sock.close()\n        return result == 0\n    except:\n        return False\n\nfor port in range(1, 100):\n    if scan_port("127.0.0.1", port):\n        print(f"Port {port} باز است")' },
+                { title: 'Password Hash', desc: 'هش کردن رمز عبور', code: 'import hashlib\n\npassword = input("رمز عبور: ")\nhashed = hashlib.sha256(password.encode()).hexdigest()\nprint(f"Hash: {hashed}")' },
+                { title: 'DNS Lookup', desc: 'پیدا کردن IP از دامنه', code: 'import socket\n\ndomain = input("دامنه: ")\ntry:\n    ip = socket.gethostbyname(domain)\n    print(f"{domain} -> {ip}")\nexcept:\n    print("خطا در یافتن IP")' }
+            ];
+            
+            for (let i = 0; i < 30; i++) {
+                const base = hackingCodes[i % hackingCodes.length];
+                const div = document.createElement('div');
+                div.className = 'code-box border-red-500';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-red-400">${i + 1}. ${base.title}</h3>
+                        <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <p class="text-yellow-300 mb-3">⚠️ ${base.desc} - فقط برای آموزش</p>
+                    <pre class="code-text">${base.code}</pre>
+                `;
+                container.appendChild(div);
+            }
+        }
+        
+        function generateCode_50Premium() {
+            const container = document.getElementById('premiumCodes');
+            container.innerHTML = '';
+            
+            const premiumCodes = [
+                { title: 'Advanced Web Scraper', code: 'import requests\nfrom bs4 import BeautifulSoup\n\nurl = "https://example.com"\nresponse = requests.get(url)\nsoup = BeautifulSoup(response.content, "html.parser")\ntitles = soup.find_all("h1")\nfor title in titles:\n    print(title.text)' },
+                { title: 'AI Chatbot', code: 'responses = {\n    "سلام": "سلام! چطور می‌تونم کمکتون کنم؟",\n    "چطوری": "عالی هستم! شما چطورید؟"\n}\n\nwhile True:\n    user_input = input("شما: ")\n    if user_input in responses:\n        print(f"Bot: {responses[user_input]}")\n    else:\n        print("Bot: متوجه نشدم!")' }
+            ];
+            
+            for (let i = 0; i < 50; i++) {
+                const base = premiumCodes[i % premiumCodes.length];
+                const div = document.createElement('div');
+                div.className = 'code-box border-orange-400';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-2xl font-bold text-orange-400">⭐ ${i + 1}. ${base.title} - VIP</h3>
+                        <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                    </div>
+                    <pre class="code-text">${base.code}</pre>
+                `;
+                container.appendChild(div);
+            }
+        }
+        
+        // ==================== COURSES ====================
+        const courses = [];
+        const levelNames = ['مقدماتی', 'متوسط', 'پیشرفته', 'حرفه‌ای'];
+        
+        for (let i = 0; i < 200; i++) {
+            courses.push({
+                id: i + 1,
+                title: `دوره هکینگ پایتون - سطح ${levelNames[Math.floor(i / 50)]} - بخش ${i % 50 + 1}`,
+                price: (Math.floor(Math.random() * 50) + 50) * 10000,
+                level: levelNames[Math.floor(i / 50)],
+                levelEn: ['beginner', 'intermediate', 'advanced', 'professional'][Math.floor(i / 50)],
+                duration: Math.floor(Math.random() * 50) + 10,
+                rating: (Math.random() * 1 + 4).toFixed(1)
+            });
+        }
+        
+        function loadCourses() {
+            const container = document.getElementById('coursesList');
+            container.innerHTML = '';
+            
+            courses.forEach(course => {
+                const div = document.createElement('div');
+                div.className = 'course-card';
+                div.innerHTML = `
+                    <div class="text-6xl mb-4 text-center">🎓</div>
+                    <h3 class="text-xl font-bold neon-green mb-3">${course.title}</h3>
+                    <p class="text-green-300 mb-2">📊 سطح: ${course.level}</p>
+                    <p class="text-green-300 mb-2">⏱️ مدت: ${course.duration} ساعت</p>
+                    <p class="text-green-300 mb-4">⭐ امتیاز: ${course.rating}/5</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-black text-yellow-400">${course.price.toLocaleString()} تومان</span>
+                        <button onclick="buyCourse(${course.id})" class="btn-3d btn-yellow px-6 py-3 rounded-xl font-bold">خرید</button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+        
+        function filterCourses(level) {
+            const container = document.getElementById('coursesList');
+            container.innerHTML = '';
+            
+            const filtered = level === 'all' ? courses : courses.filter(c => c.levelEn === level);
+            
+            filtered.forEach(course => {
+                const div = document.createElement('div');
+                div.className = 'course-card';
+                div.innerHTML = `
+                    <div class="text-6xl mb-4 text-center">🎓</div>
+                    <h3 class="text-xl font-bold neon-green mb-3">${course.title}</h3>
+                    <p class="text-green-300 mb-2">📊 سطح: ${course.level}</p>
+                    <p class="text-green-300 mb-2">⏱️ مدت: ${course.duration} ساعت</p>
+                    <p class="text-green-300 mb-4">⭐ امتیاز: ${course.rating}/5</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-black text-yellow-400">${course.price.toLocaleString()} تومان</span>
+                        <button onclick="buyCourse(${course.id})" class="btn-3d btn-yellow px-6 py-3 rounded-xl font-bold">خرید</button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+        
+        function buyCourse(courseId) {
+            if (!currentUser) {
+                showToast('لطفاً ابتدا وارد شوید! 🔐');
+                setTimeout(() => showPage('loginPage'), 1000);
+                return;
+            }
+            
+            selectedCourse = courses.find(c => c.id === courseId);
+            showPage('paymentNoticePage');
+        }
+        
+        let selectedCourse = null;
+        
+        function showCoursePage() {
+            if (!selectedCourse) return;
+            
+            const container = document.getElementById('courseDetailContent');
+            const courseDetails = [];
+            
+            for (let i = 0; i < 50; i++) {
+                courseDetails.push(`${i + 1}. این بخش از دوره شامل آموزش ${['پورت اسکنینگ', 'رمزنگاری', 'تحلیل بسته', 'نفوذ به سیستم', 'امنیت شبکه'][i % 5]} می‌باشد.`);
+            }
+            
+            const codeExamples = [];
+            for (let i = 0; i < 50; i++) {
+                codeExamples.push({
+                    title: `مثال کد ${i + 1}: ${['Port Scanner', 'Password Hasher', 'Network Sniffer', 'Packet Analyzer', 'Exploit Script'][i % 5]}`,
+                    code: `# کد مثال ${i + 1}\nimport socket\nimport sys\n\ndef hack_example_${i + 1}():\n    print("اجرای مثال ${i + 1}")\n    # کد هکینگ اخلاقی\n    target = "127.0.0.1"\n    port = ${1000 + i}\n    print(f"Testing {target}:{port}")\n\nhack_example_${i + 1}()`
+                });
+            }
+            
+            container.innerHTML = `
+                <div class="card-3d border-red-500">
+                    <h1 class="text-5xl font-black text-center neon-red mb-10">${selectedCourse.title}</h1>
+                    
+                    <div class="mb-12">
+                        <h2 class="text-4xl font-black neon-yellow mb-6">📚 توضیحات دوره:</h2>
+                        <div class="bg-black bg-opacity-60 border-2 border-yellow-400 rounded-xl p-6">
+                            ${courseDetails.map(d => `<p class="text-yellow-200 mb-2">${d}</p>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-4xl font-black neon-green mb-6">💻 نمونه کدهای دوره:</h2>
+                        ${codeExamples.map(ex => `
+                            <div class="code-box border-green-400 mb-6">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h3 class="text-2xl font-bold text-green-400">${ex.title}</h3>
+                                    <button onclick="copyCode(this)" class="copy-btn">📋 کپی</button>
+                                </div>
+                                <pre class="code-text">${ex.code}</pre>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            showPage('courseDetailPage');
+        }
+        
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            generateCode_100Main();
+            generateCode_150Usage();
+            generateCode_30Hacking();
+            generateCode_50Premium();
+            loadCourses();
+            loadAI();
+            
+            showToast('خوش آمدید به آکادمی هکینگ! 🔥', 'blue');
+            
+            showRegisterForm();
+            updateVisitorCount();
+            updateCountdown();
+        });
+        
+        // Element SDK
+        const defaultConfig = {
+            primary_color: '#00d4ff',
+            font_family: 'Vazirmatn',
+            font_size: 16
+        };
+        
+        async function onConfigChange(config) {
+            if (config.primary_color) {
+                matrixColor = config.primary_color;
+            }
+        }
+        
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+        
+        function mapToEditPanelValues(config) {
+            return new Map();
+        }
+        
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9adcbef55432c0f7',t:'MTc2NTcwNTI5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
